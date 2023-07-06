@@ -30,7 +30,14 @@ public class LinkedListGenerics<I> {
 
         System.out.println(afterData + " not found in the linked list.");
     }
-
+    void deleteFirstNum(){//method use to delete First Number from linkList.
+        if (head==null){
+            System.out.println("data is null.");
+            return;
+        }
+        I temp = (I) head.data;
+        head = head.next;
+    }
     void displayList(){//method use to print link list.
         Node temp = head;
         while (temp!=null){
