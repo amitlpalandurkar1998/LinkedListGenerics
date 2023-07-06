@@ -53,6 +53,33 @@ public class LinkedListGenerics<I> {
         }
         secondLast.next = null;
     }
+    void searchNum(I searchNumber){
+        boolean isNotFound = true;
+        if (head==null){
+            System.out.println("data is null.");
+            return ;
+        }
+        if (head.data==searchNumber){
+            System.out.println(searchNumber+" is Present.");
+            isNotFound=false;
+        } else if (head.next.data==null) {
+            System.out.println(searchNumber + " is Not Present.");
+            exit();
+        } else {
+            Node temp = head;
+            while (temp != null) {
+                if (temp.next.data == searchNumber) {
+                    System.out.println(searchNumber + " is Present.");
+                    isNotFound = false;
+                    return;
+                }
+                temp = temp.next;
+            }
+            if (isNotFound) {
+                System.out.println(searchNumber + " is Not Present.");
+            }
+        }
+    }
     void displayList(){//method use to print link list.
         Node temp = head;
         while (temp!=null){
@@ -61,4 +88,5 @@ public class LinkedListGenerics<I> {
         }
         System.out.println();
     }
+    void exit(){}
 }

@@ -14,9 +14,7 @@ public class Main {
         lgList.insertValue(30,56);
         lgList.displayList();
 
-        lgList.deleteFirstNum();
         lgList.displayList();
-        lgList.deleteLastNum();
-        lgList.displayList();
+        lgList.searchNum(30);
     }
 }
