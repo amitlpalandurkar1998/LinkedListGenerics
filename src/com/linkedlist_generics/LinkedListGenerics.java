@@ -38,6 +38,21 @@ public class LinkedListGenerics<I> {
         I temp = (I) head.data;
         head = head.next;
     }
+    void deleteLastNum(){
+        if (head==null){
+            System.out.println("data is null.");
+            return;
+        }
+        if (head.next == null) {
+            head = null;
+            return;
+        }
+        Node secondLast = head;
+        while (secondLast.next.next != null) {
+            secondLast = secondLast.next;
+        }
+        secondLast.next = null;
+    }
     void displayList(){//method use to print link list.
         Node temp = head;
         while (temp!=null){
