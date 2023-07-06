@@ -16,5 +16,7 @@ public class Main {
 
         lgList.deleteFirstNum();
         lgList.displayList();
+        lgList.deleteLastNum();
+        lgList.displayList();
     }
 }
