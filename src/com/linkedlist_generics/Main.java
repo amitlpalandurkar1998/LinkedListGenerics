@@ -5,6 +5,7 @@ public class Main {
         System.out.println("Wellcome Data Structure Problems using Java Generics Project.");
 
         LinkedListGenerics<Integer> lgList = new LinkedListGenerics<Integer>();
+
         lgList.pushValue(70);
         lgList.pushValue(30);
         lgList.pushValue(56);
