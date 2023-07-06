@@ -1,9 +1,9 @@
 package com.linkedlist_generics;
 
-public class Node {
-    int data;
+public class Node<I> {
+    I data;
     Node next;
-    Node(int data){
+    Node(I data){
         this.data=data;
         this.next=null;
     }
