@@ -7,9 +7,11 @@ public class Main {
         LinkedListGenerics<Integer> lgList = new LinkedListGenerics<Integer>();
 
         lgList.pushValue(70);
-        lgList.pushValue(30);
         lgList.pushValue(56);
 
+        lgList.displayList();
+
+        lgList.insertValue(30,56);
         lgList.displayList();
     }
 }

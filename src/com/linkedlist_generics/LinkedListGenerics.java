@@ -11,6 +11,26 @@ public class LinkedListGenerics<I> {
         newNode.next=head;
         head=newNode;
     }
+    void insertValue(I data, I afterData) {
+        if (head == null) {
+            System.out.println("Linked list is empty.");
+            return;
+        }
+
+        Node temp = head;
+        while (temp != null) {
+            if (temp.data.equals(afterData)) {
+                Node newNode = new Node(data);
+                newNode.next = temp.next;
+                temp.next = newNode;
+                return;
+            }
+            temp = temp.next;
+        }
+
+        System.out.println(afterData + " not found in the linked list.");
+    }
+
     void displayList(){//method use to print link list.
         Node temp = head;
         while (temp!=null){
