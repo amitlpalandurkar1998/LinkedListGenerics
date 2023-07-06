@@ -80,6 +80,26 @@ public class LinkedListGenerics<I> {
             }
         }
     }
+    void searchAnddeleteNum(I deleteNum){
+        boolean isNotFound = true;
+        if (head==null){
+            System.out.println("data is null.");
+            return ;
+        }
+        Node temp = head;
+        while (temp!=null){
+            if (temp.next.data==deleteNum){
+                I deleteData = (I) temp.next.data;
+                temp.next = temp.next.next;
+                isNotFound=false;
+                return ;
+            }
+            temp = temp.next;
+        }
+        if (isNotFound){
+            System.out.println("Not Present.");
+        }
+    }
     void displayList(){//method use to print link list.
         Node temp = head;
         while (temp!=null){
